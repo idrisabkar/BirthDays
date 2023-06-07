@@ -2,9 +2,14 @@ import '../App.css'
 import { ListTile } from './listTile'
 import { Button } from './button'
 import { Header } from './heade'
-import { people } from '../people'
+import { people_ } from '../people'
+import { useState } from 'react'
 
 function App() {
+  const [people, setPeople] = useState(people_)
+  function handleClick() {
+    setPeople([])
+  }
   return (
     <main className="container">
       <div>
@@ -15,7 +20,7 @@ function App() {
             return <ListTile name={name} age={age} image={imgSrc} key={id} />
           })}
         </div>
-        <Button />
+        <Button onClick={handleClick} />
       </div>
     </main>
   )

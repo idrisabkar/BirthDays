@@ -1,3 +1,7 @@
-export function Button() {
-  return <button className="btn">Cleare All</button>
+export function Button(props) {
+  return (
+    <button className="btn" onClick={props.onClick}>
+      Cleare All
+    </button>
+  )
 }
