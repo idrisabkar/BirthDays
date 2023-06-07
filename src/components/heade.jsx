@@ -1,3 +1,3 @@
-export function Header() {
-  return <h1 className="hearder">5 Birthdays ToDay</h1>
+export function Header(props) {
+  return <h1 className="hearder">{props.num} Birthdays ToDay</h1>
 }

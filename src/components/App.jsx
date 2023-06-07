@@ -13,7 +13,7 @@ function App() {
   return (
     <main className="container">
       <div>
-        <Header />
+        <Header num={people.length} />
         <div id="lisTiles">
           {people.map((person) => {
             const { name, age, imgSrc, id } = person
